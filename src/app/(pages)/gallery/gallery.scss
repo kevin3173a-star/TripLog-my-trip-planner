@@ -1,16 +1,19 @@
-.body {margin: 0;}
+.body {
+    margin: 0;
+}
 
-.gallery_title{
+.gallery_title {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    h1{
+
+    h1 {
         font-family: 'GangwonEduHyeonokT';
-        font-size: 4rem; 
+        font-size: 4rem;
         position: relative;
         z-index: 5;
-        
-        &::after{
+
+        &::after {
             content: "";
             position: absolute;
             z-index: -1;
@@ -18,22 +21,24 @@
             bottom: 35%;
             width: 100%;
             height: 15px;
-            background-color: #58D3FF; 
+            background-color: #58D3FF;
         }
     }
 }
 
-.gsub_button{
+.gsub_button {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
 }
-.gsub_button >span{
+
+.gsub_button>span {
     display: flex;
     gap: 10px;
 }
-.gsub_button > span >button{
+
+.gsub_button>span>button {
     font-size: 18px;
     color: #27678e;
     border: 1px solid #27678e;
@@ -41,46 +46,47 @@
     width: 95px;
     height: 40px;
     margin-top: 30px;
-    font-weight: 600; 
+    font-weight: 600;
     transition: 0.3s;
 }
-.gsub_button > span >button:hover{ 
-    background-color: #27678e; 
+
+.gsub_button>span>button:hover {
+    background-color: #27678e;
     color: white;
     transition: 0.3s;
 }
 
-.gsub_list_wrap{
+.gsub_list_wrap {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
     gap: 40px;
     padding-top: 20px;
 }
 
 /* 기본 6칸 */
-.gsub_list{
-    width:100%;
+.gsub_list {
+    width: 100%;
     display: grid;
-    grid-template-columns:repeat(6, minmax(0, 1fr));
-    gap:30px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 30px;
     padding: 10px 0 30px;
     transition: all 0.3s ease;
 }
 
 /* ✅ clickimg 있을 때 4칸 */
-.gsub_list_area.active .gsub_list{
-    grid-template-columns:repeat(4, minmax(0, 1fr));
+.gsub_list_area.active .gsub_list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 /* ✅ 오른쪽 영역 */
-.gsub_list_area{
+.gsub_list_area {
     flex: 1;
 }
 
 /* ✅ 왼쪽 sticky */
-.gsub_clickimg{
+.gsub_clickimg {
     flex-direction: column;
     padding: 10px 10px 30px;
     display: flex;
@@ -91,25 +97,31 @@
     flex-shrink: 0;
 }
 
-.gsub_clickimg >span:nth-of-type(1){
+.gsub_clickimg>span:nth-of-type(1) {
     justify-content: flex-end;
     display: flex;
     align-items: center;
     padding: 10px;
     gap: 10px;
 }
-.gsub_clickimg >span >svg{
-    cursor: pointer; 
+
+.gsub_clickimg>span>svg {
+    cursor: pointer;
 }
-.gsub_clickimg >div{
+
+.gsub_clickimg>div {
     padding: 10px;
-    width: 350px; height: 450px;
+    width: 350px;
+    height: 450px;
 }
-.gsub_clickimg >div >img{
-    width: 100%; height: 100%;
+
+.gsub_clickimg>div>img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.gsub_clickimg >span:nth-of-type(2){
+
+.gsub_clickimg>span:nth-of-type(2) {
     justify-content: flex-end;
     display: flex;
     align-items: center;
@@ -117,23 +129,27 @@
     gap: 10px;
     padding-bottom: 10px;
 }
-.gsub_clickimg >span >button{
+
+.gsub_clickimg>span>button {
     color: white;
     background-color: #27678e;
     padding: 3px 10px;
     border-radius: 20px;
 }
-.gsub_clickimg >input{
+
+.gsub_clickimg>input {
     font-size: 20px;
     border: none;
     text-align: center;
     background-color: transparent;
 }
-.gsub_clickimg >input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+
+.gsub_clickimg>input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
 }
-.gsub_clickimg >input:focus::placeholder {
-  color: transparent;
+
+.gsub_clickimg>input:focus::placeholder {
+    color: transparent;
 }
 
 .gsub_empty {
@@ -143,7 +159,8 @@
     font-size: 16px;
     color: #888;
 }
-.gsub_Tversion{
+
+.gsub_Tversion {
     width: 100%;
     display: flex;
     align-items: center;
@@ -151,7 +168,8 @@
     border-bottom: 2px solid #27678E;
     padding-bottom: 10px;
 }
-.gsub_Tversion >input{
+
+.gsub_Tversion>input {
     font-size: 24px;
     color: #27678E;
     border: none;
@@ -159,74 +177,97 @@
     text-align: center;
     width: 220px;
 }
-.gsub_Tversion >input::placeholder {
-  color: rgba(39, 103, 142, 0.4)
+
+.gsub_Tversion>input::placeholder {
+    color: rgba(39, 103, 142, 0.4)
 }
-.gsub_Tversion >input:focus::placeholder {
-  color: transparent;
+
+.gsub_Tversion>input:focus::placeholder {
+    color: transparent;
 }
-.gsub_Tversion .pencil{
+
+.gsub_Tversion .pencil {
     font-size: 24px;
-    cursor: pointer; 
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
-.gsub_Tversion .pencil> svg{
-    stroke: #27678E;
-}
-.gsub_Tversion .check{
-    font-size: 24px;
-    cursor: pointer; 
-    display: flex;
-    align-items: center;
-}
-.gsub_Tversion .check> svg{
+
+.gsub_Tversion .pencil>svg {
     stroke: #27678E;
 }
 
-.gsub_img{ 
+.gsub_Tversion .check {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.gsub_Tversion .check>svg {
+    stroke: #27678E;
+}
+
+.gsub_img {
     display: flex;
     align-items: center;
     justify-content: center;
     aspect-ratio: 1 / 1;
     background-color: #eee;
 }
-.gsub_img >figure{
-    width: 100%; height: 100%;
+
+.gsub_img>figure {
+    width: 100%;
+    height: 100%;
     position: relative;
 }
-.gsub_img >figure >img{
-    width: 100%; height: 100%;    
+
+.gsub_img>figure>img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.gsub_img >figure >figcaption{
-    width: 100%; height: 100%;
+
+.gsub_img>figure>figcaption {
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
-.gsub_img >figure >figcaption >svg{
-    width: 30px; height: 30px;
-    fill: white;
-    cursor: pointer; 
-}
-.gsub_add{}
-.gsub_add >svg{width: 20px; height: 20px;}
 
-.gsub_popup{
-    width: 100%; height: 100%;
+.gsub_img>figure>figcaption>svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    cursor: pointer;
+}
+
+.gsub_add {}
+
+.gsub_add>svg {
+    width: 20px;
+    height: 20px;
+}
+
+.gsub_popup {
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    left: 0; top: 0; 
+    left: 0;
+    top: 0;
     z-index: 99999;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.pop{
+
+.pop {
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -238,60 +279,71 @@
     padding: 20px 20px 35px;
     border-radius: 20px;
 }
-.pop >span{
+
+.pop>span {
     display: flex;
     justify-content: flex-end;
     width: 100%;
 }
-.pop >span >svg{
-    width: 20px; height: 20px;
+
+.pop>span>svg {
+    width: 20px;
+    height: 20px;
     stroke: #C3C3C3;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.pop >input:nth-of-type(1){
+
+.pop>input:nth-of-type(1) {
     font-size: 20px;
     border: none;
     background-color: transparent;
     text-align: center;
 }
-.pop >input:nth-of-type(1)::placeholder{
+
+.pop>input:nth-of-type(1)::placeholder {
     color: rgba(0, 0, 0, 0.4)
 }
-.pop >input:nth-of-type(1):focus::placeholder{
+
+.pop>input:nth-of-type(1):focus::placeholder {
     color: transparent;
 }
-.pop >input:nth-of-type(2){
+
+.pop>input:nth-of-type(2) {
     color: gray;
     width: 190px;
 }
-.pop >input:nth-of-type(2)::-webkit-file-upload-button{
+
+.pop>input:nth-of-type(2)::-webkit-file-upload-button {
     background-color: #27678e;
     color: white;
     font-size: 18px;
     padding: 5px 10px;
     border: none;
     border-radius: 20px;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.pop >button{
+
+.pop>button {
     width: 100px;
     font-size: 20px;
-    background-color:#27678e;
+    background-color: #27678e;
     color: white;
     padding: 3px 10px;
     border-radius: 20px;
     font-weight: 500;
 }
+
 input[type="file"]::file-selector-button {
-  font-size: 20px !important;  
-  font-family: "Pretendard", sans-serif;
-  padding: 4px 8px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+    font-size: 20px !important;
+    font-family: "Pretendard", sans-serif;
+    padding: 4px 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
-.Fix{
-    align-self: flex-end; 
+
+.Fix {
+    align-self: flex-end;
     width: 24px;
     height: 24px;
     stroke: #C3C3C3;
@@ -299,66 +351,235 @@ input[type="file"]::file-selector-button {
     margin-bottom: -10px;
 }
 
+.gsub_popup .pop_maxcountMsg {
+    font-size: 14px;
+    color: #ff00008c;
+}
 
 
 
 // Tablet Landscape (951px ~ 1024px)
-@media (max-width: 1024px){
-    .gallery_title h1{ font-size: 2.7rem; }
-    .gsub_button > span > button{font-size: 16px; width: 80px; height: 35px;}
-	.gsub_Tversion > input{font-size: 20px;}
-	.gsub_Tversion .pencil, .gsub_Tversion .check{font-size: 20px;}
-	.gsub_img > figure > figcaption > svg{width: 25px; height: 25px;}
-	.gsub_clickimg > div {width: 300px; height: 400px;}
-	.gsub_clickimg{width: 320px;}
-	.gsub_clickimg > span > button {border-radius: 18px; padding: 1px 8px;}
-	.gsub_clickimg > input {font-size: 18px;}
-    .pop > input:first-of-type {font-size: 18px;}
-	.pop > span > svg {width: 18px; height: 18px;}
-	input[type="file"]::file-selector-button {font-size: 18px !important;}
-	.pop > button {font-size: 18px; padding: 2px 8px;}
+@media (max-width: 1024px) {
+    .gallery_title h1 {
+        font-size: 2.7rem;
+    }
+
+    .gsub_button>span>button {
+        font-size: 16px;
+        width: 80px;
+        height: 35px;
+    }
+
+    .gsub_Tversion>input {
+        font-size: 20px;
+    }
+
+    .gsub_Tversion .pencil,
+    .gsub_Tversion .check {
+        font-size: 20px;
+    }
+
+    .gsub_img>figure>figcaption>svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .gsub_clickimg>div {
+        width: 300px;
+        height: 400px;
+    }
+
+    .gsub_clickimg {
+        width: 320px;
+    }
+
+    .gsub_clickimg>span>button {
+        border-radius: 18px;
+        padding: 1px 8px;
+    }
+
+    .gsub_clickimg>input {
+        font-size: 18px;
+    }
+
+    .pop>input:first-of-type {
+        font-size: 18px;
+    }
+
+    .pop>span>svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    input[type="file"]::file-selector-button {
+        font-size: 18px !important;
+    }
+
+    .pop>button {
+        font-size: 18px;
+        padding: 2px 8px;
+    }
+
+    .gsub_popup .pop_maxcountMsg {
+        font-size: 12px;
+    }
 }
 
 // Tablet Portrait (950px 이하)
-@media (max-width: 950px){
-    .gallery_title {justify-content: space-between; align-items: flex-end;}
-    .gsub_list {gap: 8px; grid-template-columns: repeat(4, minmax(0, 1fr));}
-	.gsub_button > span > button {font-size: 14px; width: 75px; height: 30px;}
-	.gsub_Tversion > input, .gsub_Tversion .pencil, .check {font-size: 18px;}
-    .gsub_clickimg > input, .pop > input:first-of-type {font-size: 16px;}
+@media (max-width: 950px) {
+    .gallery_title {
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .gsub_list {
+        gap: 8px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .gsub_button>span>button {
+        font-size: 14px;
+        width: 75px;
+        height: 30px;
+    }
+
+    .gsub_Tversion>input,
+    .gsub_Tversion .pencil,
+    .check {
+        font-size: 18px;
+    }
+
+    .gsub_clickimg>input,
+    .pop>input:first-of-type {
+        font-size: 16px;
+    }
+
     .gsub_clickimg {
         width: 220px;
         position: fixed;
-        top: 50%; left: 50%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
         z-index: 5;
     }
-    .gsub_clickimg > span:first-of-type {padding: 0;}
-    .gsub_clickimg > span > button {padding: 0 8px; font-size: 14px;}
-    .gsub_clickimg > div {width: 200px; height: 250px;}
-    .gsub_add > svg {width: 16px; height: 16px;}
-    .gsub_list_wrap {padding-top: 20px;}
-    input[type="file"]::file-selector-button {font-size: 16px !important;}
-    .pop > button {font-size: 16px; width: 80px;}
-    .pop {width: 250px; padding: 20px 30px 35px;}
-    .pop > span > svg {width: 16px; height: 16px;}
+
+    .gsub_clickimg>span:first-of-type {
+        padding: 0;
+    }
+
+    .gsub_clickimg>span>button {
+        padding: 0 8px;
+        font-size: 14px;
+    }
+
+    .gsub_clickimg>div {
+        width: 200px;
+        height: 250px;
+    }
+
+    .gsub_add>svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .gsub_list_wrap {
+        padding-top: 20px;
+    }
+
+    input[type="file"]::file-selector-button {
+        font-size: 16px !important;
+    }
+
+    .pop>button {
+        font-size: 16px;
+        width: 80px;
+    }
+
+    .pop {
+        width: 250px;
+        padding: 20px 30px 35px;
+    }
+
+    .pop>span>svg {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 // Mobile (480px 이하)
-@media (max-width: 480px){
-    .gsub_button > span > button {font-size: 12px; width: 65px; height: 25px;}
-	.gsub_Tversion > input, .gsub_Tversion .pencil, .check {font-size: 14px;}
-	.gsub_add > svg {width: 12px; height: 12px;}
-	.gsub_clickimg > input, .pop > input:first-of-type {font-size: 14px;}
-    input[type="file"]::file-selector-button {font-size: 14px !important;}
-    .pop{width: 220px; gap: 20px;}
-	.pop > button {font-size: 14px; width: 70px;}
-    .pop > span > svg {width: 14px; height: 14px;}
-    .gsub_clickimg > div {width: 180px; height: 230px;}
-    .gsub_clickimg {width: 200px; padding: 10px 10px 20px;}
-    .gsub_clickimg > span > svg {width: 12px; height: 12px;}
-    .gsub_clickimg > span > button {font-size: 12px;}
-    .gsub_clickimg > input, .pop > input:first-of-type {font-size: 12px;}
-    .gsub_img > figure > figcaption > svg {width: 14px; height: 14px;}
+@media (max-width: 480px) {
+    .gsub_button>span>button {
+        font-size: 12px;
+        width: 65px;
+        height: 25px;
+    }
+
+    .gsub_Tversion>input,
+    .gsub_Tversion .pencil,
+    .check {
+        font-size: 14px;
+    }
+
+    .gsub_add>svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .gsub_clickimg>input,
+    .pop>input:first-of-type {
+        font-size: 14px;
+    }
+
+    input[type="file"]::file-selector-button {
+        font-size: 14px !important;
+    }
+
+    .pop {
+        width: 220px;
+        gap: 20px;
+    }
+
+    .pop>button {
+        font-size: 14px;
+        width: 70px;
+    }
+
+    .pop>span>svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .gsub_clickimg>div {
+        width: 180px;
+        height: 230px;
+    }
+
+    .gsub_clickimg {
+        width: 200px;
+        padding: 10px 10px 20px;
+    }
+
+    .gsub_clickimg>span>svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .gsub_clickimg>span>button {
+        font-size: 12px;
+    }
+
+    .gsub_clickimg>input,
+    .pop>input:first-of-type {
+        font-size: 12px;
+    }
+
+    .gsub_img>figure>figcaption>svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .gsub_popup .pop_maxcountMsg {
+        font-size: 8px;
+    }
 }
